@@ -4,9 +4,12 @@
     --container-width: 40rem;
 
     --tab-padding-block: 0.1rem;
+    --tab-gap: 0.5rem;
     --tab-padding-inline: 1rem;
 
     --nav-link-gap: 1.5rem;
+
+    --container-gap: 2rem;
 
     --radius: 0.5rem;
 
@@ -63,16 +66,48 @@
     --toggle-checkbox-size: 34px;
 }
 
+#day {
+    text-decoration: underline dotted;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --neutral-000: #0a0a0a;
+        --neutral-100: #222222;
+        --neutral-200: #393939;
+        --neutral-300: #525252;
+        --neutral-400: #6c6c6c;
+        --neutral-500: #878787;
+        --neutral-600: #a3a3a3;
+        --neutral-700: #c0c0c0;
+        --neutral-800: #dddddd;
+        --neutral-900: #fcfcfc;
+    }
+
+    #day {
+        text-decoration: none;
+    }
+
+    #night {
+        text-decoration: underline dotted;
+    }
+}
+
 body {
     margin: 0;
 
     background-color: var(--neutral-000);
     color: var(--neutral-900);
+    font-family: "Chakra Petch", sans-serif;
 }
 
 .container {
     max-width: var(--container-width);
     margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--container-gap);
 }
 
 header {
@@ -82,12 +117,16 @@ header {
 
 #dark-toggle {
     margin-left: auto;
-    background-color: var(--neutral-900);
-    color: var(--neutral-000);
+    background-color: var(--neutral-100);
+    color: var(--neutral-700);
     padding-inline: var(--tab-padding-inline);
     padding-block: var(--tab-padding-block);
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--tab-gap);
 }
 
 nav {
@@ -124,4 +163,14 @@ nav ul li {
     background-color: var(--neutral-100); 
 
     border-radius: var(--radius);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-text {
+    color: var(--neutral-400);
 }
