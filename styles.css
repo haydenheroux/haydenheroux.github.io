@@ -10,15 +10,61 @@
 
     --radius: 0.5rem;
 
-    --neutral-100: white;
-    --neutral-500: #eee;
-    --neutral-900: black;
+    /* neutrals */
+    --neutral-100: #fdfdfd;
+    --neutral-200: #f4f4f4;
+    --neutral-300: #eaeaea;
+    --neutral-400: #e0e0e0;
+    --neutral-500: #d6d6d6;
+    --neutral-600: #cccccc;
+    --neutral-700: #c2c2c2;
+    --neutral-800: #b8b8b8;
+    --neutral-900: #333333;
+
+    /* pinks */
+    --pink-100: #FFFFFF;
+    --pink-200: #FDF1F3;
+    --pink-300: #FBE4E7;
+    --pink-400: #F9D7DB;
+    --pink-500: #F7C9CF;
+    --pink-600: #F5BCC3;
+    --pink-700: #F3AFB7;
+    --pink-800: #F1A1AB;
+    --pink-900: #EF949F;
+
+    /* blues */
+    --blue-100: #FFFFFF;
+    --blue-200: #F2F6FA;
+    --blue-300: #E5EDF5;
+    --blue-400: #D9E4F0;
+    --blue-500: #CCEBF9;
+    --blue-600: #BFE2F4;
+    --blue-700: #B2D9EF;
+    --blue-800: #A6D0EA;
+    --blue-900: #99C7E5;
+
+    --p1-1: #f9e8f2;
+    --p1-2: #e7d4e7;
+    --p1-3: #fde2e7;
+    --p1-4: #fee7e1;
+    --p1-5: #c2d5e4;
+    --p1-6: #cdb9d5;
+    --p1-7: #a8a9c8;
+
+    --p2-1: #fcedf2;
+    --p2-2: #fed8f1;
+    --p2-3: #f7c7de;
+    --p2-4: #f2b5d4;
+    --p2-5: #c4ccf0;
 
     --logo-size: 2em;
 }
 
 body {
     margin: 0;
+
+    background-color: var(--neutral-100);
+    color: var(--neutral-900);
 }
 
 .container {
@@ -72,7 +118,7 @@ nav ul li {
     width: 100%;
     height: 400px;
     
-    background-color: var(--neutral-500); 
+    background-color: var(--neutral-200); 
 
     border-radius: var(--radius);
 }
