@@ -13,6 +13,8 @@
 
     --radius: 0.5rem;
 
+    --logo-margin-left: 4rem;
+
     /* neutrals */
     --neutral-000: #fcfcfc;
     --neutral-100: #e3e3e3;
@@ -64,6 +66,29 @@
     --logo-size: 2em;
 
     --toggle-checkbox-size: 34px;
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --container-width: 90vw;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  #logo {
+      margin-left: 0 !important;
+    width: 100%;
+
+    text-align: center;
+  }
+
+    nav ul {
+        width: 100%;
+
+        justify-content: center;
+    }
 }
 
 #day {
@@ -150,7 +175,8 @@ nav ul li {
 }
 
 #logo {
-    margin: auto;
+    margin-block: auto;
+    margin-left: var(--logo-margin-left);
 
     font-family: "Pixelify Sans", sans-serif;
     font-size: var(--logo-size);
