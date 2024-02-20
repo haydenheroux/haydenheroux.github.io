@@ -56,11 +56,16 @@ nav ul {
     gap: var(--nav-link-gap);
 }
 
+nav ul li {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 200;
+}
+
 #logo {
     margin: auto;
 
+    font-family: "Pixelify Sans", sans-serif;
     font-size: var(--logo-size);
-    font-weight: bold;
 }
 
 #hero {
