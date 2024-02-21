@@ -1,71 +1,71 @@
 @import url("reset.css");
 
 :root {
-    --container-width: 40rem;
+  --container-width: 40rem;
 
-    --tab-padding-block: 0.1rem;
-    --tab-gap: 0.5rem;
-    --tab-padding-inline: 1rem;
+  --tab-padding-block: 0.1rem;
+  --tab-gap: 0.5rem;
+  --tab-padding-inline: 1rem;
 
-    --nav-link-gap: 1.5rem;
+  --nav-link-gap: 1.5rem;
 
-    --container-gap: 2rem;
+  --container-gap: 2rem;
 
-    --radius: 0.5rem;
+  --radius: 0.5rem;
 
-    --logo-margin-left: 4rem;
+  --logo-margin-left: 4rem;
 
-    /* neutrals */
-    --neutral-000: #fcfcfc;
-    --neutral-100: #e3e3e3;
-    --neutral-200: #cbcbcb;
-    --neutral-300: #b3b3b3;
-    --neutral-400: #9c9c9c;
-    --neutral-500: #868686;
-    --neutral-600: #707070;
-    --neutral-700: #5b5b5b;
-    --neutral-800: #464646;
-    --neutral-900: #333333;
+  /* neutrals */
+  --neutral-000: #fcfcfc;
+  --neutral-100: #e3e3e3;
+  --neutral-200: #cbcbcb;
+  --neutral-300: #b3b3b3;
+  --neutral-400: #9c9c9c;
+  --neutral-500: #868686;
+  --neutral-600: #707070;
+  --neutral-700: #5b5b5b;
+  --neutral-800: #464646;
+  --neutral-900: #333333;
 
-    /* pinks */
-    --pink-100: #FFFFFF;
-    --pink-200: #FDF1F3;
-    --pink-300: #FBE4E7;
-    --pink-400: #F9D7DB;
-    --pink-500: #F7C9CF;
-    --pink-600: #F5BCC3;
-    --pink-700: #F3AFB7;
-    --pink-800: #F1A1AB;
-    --pink-900: #EF949F;
+  /* pinks */
+  --pink-100: #ffffff;
+  --pink-200: #fdf1f3;
+  --pink-300: #fbe4e7;
+  --pink-400: #f9d7db;
+  --pink-500: #f7c9cf;
+  --pink-600: #f5bcc3;
+  --pink-700: #f3afb7;
+  --pink-800: #f1a1ab;
+  --pink-900: #ef949f;
 
-    /* blues */
-    --blue-100: #FFFFFF;
-    --blue-200: #F2F6FA;
-    --blue-300: #E5EDF5;
-    --blue-400: #D9E4F0;
-    --blue-500: #CCEBF9;
-    --blue-600: #BFE2F4;
-    --blue-700: #B2D9EF;
-    --blue-800: #A6D0EA;
-    --blue-900: #99C7E5;
+  /* blues */
+  --blue-100: #ffffff;
+  --blue-200: #f2f6fa;
+  --blue-300: #e5edf5;
+  --blue-400: #d9e4f0;
+  --blue-500: #ccebf9;
+  --blue-600: #bfe2f4;
+  --blue-700: #b2d9ef;
+  --blue-800: #a6d0ea;
+  --blue-900: #99c7e5;
 
-    --p1-1: #f9e8f2;
-    --p1-2: #e7d4e7;
-    --p1-3: #fde2e7;
-    --p1-4: #fee7e1;
-    --p1-5: #c2d5e4;
-    --p1-6: #cdb9d5;
-    --p1-7: #a8a9c8;
+  --p1-1: #f9e8f2;
+  --p1-2: #e7d4e7;
+  --p1-3: #fde2e7;
+  --p1-4: #fee7e1;
+  --p1-5: #c2d5e4;
+  --p1-6: #cdb9d5;
+  --p1-7: #a8a9c8;
 
-    --p2-1: #fcedf2;
-    --p2-2: #fed8f1;
-    --p2-3: #f7c7de;
-    --p2-4: #f2b5d4;
-    --p2-5: #c4ccf0;
+  --p2-1: #fcedf2;
+  --p2-2: #fed8f1;
+  --p2-3: #f7c7de;
+  --p2-4: #f2b5d4;
+  --p2-5: #c4ccf0;
 
-    --logo-size: 2em;
+  --logo-size: 2em;
 
-    --toggle-checkbox-size: 34px;
+  --toggle-checkbox-size: 34px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -78,125 +78,126 @@
   }
 
   #logo {
-      margin-left: 0 !important;
+    margin-left: 0 !important;
     width: 100%;
 
     text-align: center;
   }
 
-    nav ul {
-        width: 100%;
+  nav ul {
+    width: 100%;
 
-        justify-content: center;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 #day {
-    text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --neutral-000: #0a0a0a;
-        --neutral-100: #222222;
-        --neutral-200: #393939;
-        --neutral-300: #525252;
-        --neutral-400: #6c6c6c;
-        --neutral-500: #878787;
-        --neutral-600: #a3a3a3;
-        --neutral-700: #c0c0c0;
-        --neutral-800: #dddddd;
-        --neutral-900: #fcfcfc;
-    }
+  :root {
+    --neutral-000: #0a0a0a;
+    --neutral-100: #222222;
+    --neutral-200: #393939;
+    --neutral-300: #525252;
+    --neutral-400: #6c6c6c;
+    --neutral-500: #878787;
+    --neutral-600: #a3a3a3;
+    --neutral-700: #c0c0c0;
+    --neutral-800: #dddddd;
+    --neutral-900: #fcfcfc;
+  }
 
-    #day {
-        text-decoration: none;
-    }
+  #day {
+    text-decoration: none;
+  }
 
-    #night {
-        text-decoration: underline dotted;
-    }
+  #night {
+    text-decoration: underline dotted;
+  }
 }
 
 body {
-    margin: 0;
+  margin: 0;
 
-    background-color: var(--neutral-000);
-    color: var(--neutral-900);
-    font-family: "Chakra Petch", sans-serif;
+  background-color: var(--neutral-000);
+  color: var(--neutral-900);
+  font-family: "Chakra Petch", sans-serif;
 }
 
 .container {
-    max-width: var(--container-width);
-    margin-inline: auto;
+  max-width: var(--container-width);
+  margin-inline: auto;
 
-    display: flex;
-    flex-direction: column;
-    gap: var(--container-gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--container-gap);
 }
 
 header {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #dark-toggle {
-    margin-left: auto;
-    background-color: var(--neutral-100);
-    color: var(--neutral-700);
-    padding-inline: var(--tab-padding-inline);
-    padding-block: var(--tab-padding-block);
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
+  margin-left: auto;
+  background-color: var(--neutral-100);
+  color: var(--neutral-700);
+  padding-inline: var(--tab-padding-inline);
+  padding-block: var(--tab-padding-block);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
 
-    display: flex;
-    flex-direction: row;
-    gap: var(--tab-gap);
+  display: flex;
+  flex-direction: row;
+  gap: var(--tab-gap);
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--nav-link-gap);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--nav-link-gap);
 }
 
 nav ul li {
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: 200;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 200;
 }
 
 #logo {
-    margin-block: auto;
-    margin-left: var(--logo-margin-left);
+  margin-block: auto;
+  margin-left: var(--logo-margin-left);
 
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: var(--logo-size);
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: var(--logo-size);
 }
 
 #hero {
-    width: 100%;
-    height: 400px;
-    
-    background-color: var(--neutral-100); 
+  width: 100%;
+  height: 400px;
 
-    border-radius: var(--radius);
+  background-color: var(--neutral-100);
+
+  border-radius: var(--radius);
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #footer-text {
-    color: var(--neutral-400);
+  color: var(--neutral-400);
 }
