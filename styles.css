@@ -92,12 +92,15 @@
   }
 }
 
+#day, #night {
+    cursor: pointer;
+}
+
 #day {
   text-decoration: underline dotted;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+.nightmode {
     --neutral-000: #0a0a0a;
     --neutral-100: #222222;
     --neutral-200: #393939;
@@ -108,7 +111,6 @@
     --neutral-700: #c0c0c0;
     --neutral-800: #dddddd;
     --neutral-900: #fcfcfc;
-  }
 
   #day {
     text-decoration: none;
