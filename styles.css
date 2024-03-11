@@ -6,7 +6,6 @@
   --tab-padding-block: 0.1rem;
   --tab-gap: 0.5rem;
   --tab-padding-inline: 1rem;
-
   --nav-link-gap: 1.5rem;
 
   --container-gap: 2rem;
@@ -93,7 +92,12 @@
 }
 
 #day, #night {
-    cursor: pointer;
+  border: none;
+
+  background-color: var(--neutral-100);
+  color: var(--neutral-700);
+
+  cursor: pointer;
 }
 
 #day {
