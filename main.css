@@ -1,7 +1,7 @@
 :root {
     --color-background: #1e1e1e;
-    --color-foreground: #ffffff;
-    --color-dim: #b2b2b2;
+    --color-foreground: #eeeeee;
+    --color-dim: #919191;
     --size-xxxtiny: 0.0625;
     --size-xxtiny: 0.125rem;
     --size-xtiny: 0.25rem;
@@ -32,7 +32,8 @@ html {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-size: 16px;
-    font-family: "Hanuman", serif;
+    font-family: "League Spartan", serif;
+    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
@@ -47,6 +48,7 @@ nav {
     flex-direction: column;
     gap: var(--size-xtiny);
     margin-top: var(--size-large);
+    margin-bottom: var(--size-xxlarge);
 }
 
 @media screen and (min-width: 800px) {
@@ -65,17 +67,18 @@ nav a {
 }
 
 header {
-    margin-block: var(--size-xxlarge);
+    margin-bottom: var(--size-xlarge);
 }
 
 h1 {
     font-size: var(--size-xxlarge);
     font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 900;
     font-variation-settings: "wdth" 125;
     font-style: normal;
     text-transform: uppercase;
-    margin-bottom: var(--size-small);
+    margin-bottom: var(--size-tiny);
 }
 
 p {
@@ -87,6 +90,10 @@ a {
     text-decoration-style: dotted;
     text-decoration-line: underline;
     text-decoration-thickness: var(--size-xxxtiny);
+}
+
+a:hover {
+    color: var(--color-dim);
 }
 
 .subtitle {
