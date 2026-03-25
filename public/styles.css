@@ -1,0 +1,48 @@
+:root {
+    --color-background: #fefefe;
+    --color-body: #544944;
+    --color-accent: #92a96c;
+}
+
+body {
+    max-width: 800px;
+    margin: 2rem auto;
+
+    background: var(--color-background);
+    color: var(--color-body);
+
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+a {
+    color: var(--color-body);
+
+    text-decoration: none;
+    border-bottom: 1px dotted var(--color-body);
+}
+
+header {
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-photo {
+    width: 200px;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+}
+
+.info {
+    color: var(--color-accent);
+}
+
+.info h1, .info p {
+    margin-bottom: 0;
+
+    line-height: 1;
+}
