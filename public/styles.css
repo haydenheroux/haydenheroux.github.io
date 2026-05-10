@@ -1,6 +1,6 @@
 :root {
     --color-background: #f9faf9;
-    --color-body: #3c3d4a;
+    --color-body: #545454;
     --color-accent: #738754;
     --color-accent-1: #91aa69;
     --color-accent-2: #515e3a;
@@ -19,20 +19,26 @@ body {
     font-style: normal;
     font-size: 16px;
     line-height: 1.4;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 a {
     color: var(--color-body);
 
     text-decoration: none;
-    border-bottom: 1px dotted var(--color-body);
+    border-bottom: 1px solid var(--color-body);
+}
+
+a:hover {
+    border-color: var(--color-accent);
 }
 
 header {
     display: flex;
     gap: 2rem;
-
-    margin-bottom: 2rem;
 }
 
 .profile-photo {
@@ -43,24 +49,7 @@ header {
     border-radius: 50%;
 }
 
-@media (max-width: 800px) {
-    body {
-        margin-inline: 2rem;
-    }
-
-    header {
-        flex-direction: column;
-        gap: 0rem;
-    }
-
-    .profile-photo {
-        width: 100%;
-        max-width: 400px;
-        margin-inline: auto;
-    }
-}
-
-.info {
+.info h1, .info b {
     color: var(--color-accent);
 }
 
@@ -70,6 +59,11 @@ header {
 
 .info h1 {
     line-height: 0.65;
+    font-weight: 700;
+}
+
+.info b {
+    font-weight: 500;
 }
 
 .info p {
@@ -88,8 +82,59 @@ nav a {
     padding: 10px 14px;
     border-bottom: none;
     color: var(--color-background);
+
+    font-weight: 500;
 }
 
 nav a:hover, nav a:active {
     background-color: var(--color-accent-2);
 }
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.project {
+    width: calc(100% - 22px); 
+    max-width: 380px;
+    margin-inline: auto;
+
+    border: 1px solid var(--color-body);
+    padding: 10px;
+
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.project.active {
+    border-width: 2px;
+    border-color: var(--color-accent);
+}
+
+.project b {
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+    body {
+        margin-inline: 2rem;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .profile-photo {
+        width: 100%;
+        max-width: 400px;
+        margin-inline: auto;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
