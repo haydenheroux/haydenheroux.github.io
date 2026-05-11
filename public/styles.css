@@ -60,8 +60,16 @@ h1, h2, .info b {
     color: var(--color-accent);
 }
 
+p {
+    margin: 0;
+}
+
+.info {
+    margin-bottom: 1.25rem;
+}
+
 .info h1, .info p {
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
 }
 
 .info h1 {
@@ -74,13 +82,13 @@ h1, h2, .info b {
 }
 
 .info p {
-    line-height: 0.85;
+    line-height: 0.95;
 }
 
 nav {
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 
     background-color: var(--color-accent);
 
@@ -156,6 +164,10 @@ nav a:hover, nav a:active {
         width: 100%;
         max-width: 400px;
         margin-inline: auto;
+    }
+
+    nav {
+        justify-content: flex-start;
     }
 
     .project-container {
