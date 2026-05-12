@@ -150,6 +150,30 @@ nav a:hover, nav a:active {
     font-weight: 600;
 }
 
+.calendar {
+    font-family: inherit !important;
+}
+
+.calendar div a {
+    visibility: hidden;
+}
+
+.ContributionCalendar-day[data-level="1"] {
+    background-color: var(--color-accent-1) !important;
+}
+
+.ContributionCalendar-day[data-level="2"] {
+    background-color: var(--color-accent) !important;
+}
+
+.ContributionCalendar-day[data-level="3"] {
+    background-color: var(--color-accent-2) !important;
+}
+
+.ContributionCalendar-day[data-level="4"] {
+    background-color: var(--color-accent-3) !important;
+}
+
 @media (max-width: 800px) {
     body {
         margin-inline: 2rem;
