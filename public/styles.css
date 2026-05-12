@@ -56,7 +56,7 @@ header {
     border-radius: 50%;
 }
 
-h1, h2, .info b {
+h1, h2, h3, .info b {
     color: var(--color-accent);
 }
 
@@ -123,13 +123,13 @@ nav a:hover, nav a:active {
     background-color: var(--color-accent);
 }
 
-.project-container {
+.card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-.project {
+.card {
     width: calc(100% - 22px); 
     max-width: 380px;
     margin-inline: auto;
@@ -141,12 +141,12 @@ nav a:hover, nav a:active {
     line-height: 1.4;
 }
 
-.project.active {
+.card.active {
     border-width: 2px;
     border-color: var(--color-accent);
 }
 
-.project b {
+.card b {
     font-weight: 600;
 }
 
@@ -170,7 +170,7 @@ nav a:hover, nav a:active {
         justify-content: flex-start;
     }
 
-    .project-container {
+    .card-container {
         grid-template-columns: 1fr;
     }
 }
