@@ -20,7 +20,7 @@ body {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
 
     display: flex;
@@ -118,10 +118,17 @@ nav a:hover, nav a:active {
     background-size: auto 200%;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .section-heading {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom: 1rem;
 }
 
 .bar {
