@@ -130,8 +130,10 @@
     document.body.appendChild(nekoEl);
 
     document.addEventListener("mousemove", function (event) {
-      mousePosX = event.clientX;
-      mousePosY = event.clientY;
+      if (!document.querySelector("body").matches(":hover")) {
+        mousePosX = event.clientX;
+        mousePosY = event.clientY;
+      }
     });
     
     if (persistPosition) {
