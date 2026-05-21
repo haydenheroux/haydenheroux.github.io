@@ -101,7 +101,7 @@ nav {
     background-color: var(--color-accent);
     border-radius: var(--size-border-radius);
 
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 nav a {
