@@ -122,22 +122,26 @@ nav a:hover, nav a:active {
 main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .section-heading {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 1rem;
-}
 
-.bar {
-    width: 100%;
-    margin-top: 0.25rem;
-    height: 2px;
-    border-radius: 2px;
-    background-color: var(--color-accent);
+    --padding-top: 2rem;
+
+    h2 {
+        padding-top: var(--padding-top);
+    }
+
+    .bar {
+        width: 100%;
+        margin-top: calc(var(--padding-top) + .25rem);
+        height: 2px;
+        border-radius: 2px;
+        background-color: var(--color-accent);
+    }
 }
 
 .card-container {
