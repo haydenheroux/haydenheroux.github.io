@@ -128,7 +128,6 @@ main {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 0.25rem;
 
     --padding-top: 2rem;
 
@@ -255,8 +254,9 @@ main {
 
     .profile-photo {
         width: 100%;
-        max-width: 400px;
+        max-width: 320px;
         margin-inline: auto;
+        margin-bottom: 4rem;
     }
 
     nav {
