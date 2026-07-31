@@ -384,6 +384,25 @@ footer {
     padding: 0;
 }
 
+.footer-links a {
+    display: inline-flex;
+    color: var(--body);
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.footer-links svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    display: block;
+}
+
 /* ---------- reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
