@@ -1,216 +1,371 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0"/>
-        <title>Hayden Heroux</title>
-        <meta name="description" content="Computer Science at Worcester Polytechnic Institute."/>
-        <link rel="icon" type="image/x-icon" href="./public/pfp.png" />
-        <link rel="canonical" href="http://haydenheroux.com"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Hayden Heroux · Software Engineer</title>
+        <meta name="description" content="Hayden Heroux is a software engineer at WPI working on control systems, distributed systems, and robotics tooling. Previously controls for Rensselaer Motorsport Formula SAE and exec board of RPI Robotics."/>
+        <meta name="author" content="Hayden Heroux"/>
+        <link rel="icon" type="image/png" href="./public/favicon.png"/>
+        <link rel="apple-touch-icon" href="./public/favicon.png"/>
+        <link rel="canonical" href="https://www.haydenheroux.com/"/>
+        <meta name="theme-color" content="#46602f"/>
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Hayden Heroux · Software Engineer"/>
+        <meta property="og:description" content="Software engineer at WPI working on control systems, distributed systems, and robotics tooling."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.haydenheroux.com/"/>
+        <meta property="og:image" content="https://www.haydenheroux.com/public/favicon.png"/>
+        <meta name="twitter:card" content="summary"/>
+
         <link rel="stylesheet" href="./public/styles.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar.min.js" defer></script>
+        <link rel="stylesheet" href="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar-responsive.css"/>
     </head>
     <body>
-        <header>
-            <img src="./public/pfp.png" class="profile-photo" />
-            <div>
-                <div class="info">
-                    <h1>Hayden Heroux</h1>
-                    <p><b>Software Engineer & Robotics Enthusiast</b></p>
-                </div>
-                <p>Worcester Polytechnic Institute (WPI) • Software Engineering • Distributed Systems • Robotics & Controls</p>
-            </div>
-        </header>
-        <nav>
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <nav class="topbar" aria-label="Primary">
             <a href="#about">About</a>
+            <a href="#news">News</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#stats">Stats</a>
-            <a href="https://www.github.com/haydenheroux">GitHub</a>
-            <a href="https://www.linkedin.com/in/hayden-heroux">LinkedIn</a>
         </nav>
-        <main>
-            <section>
-                <div class="section-heading">
-                    <h2 id="about">About</h2>
-                    <div class="bar"></div>
+
+        <div class="site-shell">
+            <header class="hero">
+                <img src="./public/pfp.png" class="profile-photo" alt="Portrait of Hayden Heroux" width="224" height="224"/>
+                <div class="hero-text">
+                    <h1>Hayden Heroux</h1>
+                    <p class="role">Software Engineer · Controls &amp; Distributed Systems</p>
+                    <p class="hero-line">CS student at WPI. Previously controls development for Rensselaer Motorsport Formula SAE and exec board of RPI Robotics.</p>
+                    <ul class="contact-links">
+                        <li>
+                            <a href="https://github.com/haydenheroux" rel="noopener" aria-label="GitHub profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/hayden-heroux" rel="noopener" aria-label="LinkedIn profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <p>I am a computer science student at Worcester Polytechnic Institute driven by a fascination with complex systems and elegant mathematics. Whether I am architecting fault-tolerant backend, implementing precise control loops for robots, or proving the safety of systems,  I build software that is robust, performant, and reliable.</p>
-                <br />
-                <p>My work combines precise technical constraints with adaptive project leadership. From managing teams under tight timelines to optimizing low-level networks, I enjoy solving hard engineering problems in all layers of computing.</p>
-            </section>
-            <section>
-                <div class="section-heading">
-                    <h2 id="projects">Projects</h2>
-                    <div class="bar"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card">
-                        <b>Merge Zone</b>
-                        <br />
-                        <a href="https://www.github.com/haydenheroux/merge/">GitHub</a>
-                        <a href="https://www.merge.zone/">Site</a>
-                        <br />
-                        <br />
-                        <p>Performance-focused repository analytics platform. Ingests, aggregates, and visualizes developer data from the GitHub API.</p>
-                        <ul>
-                            <li>Architected efficient, concurrent data processing system using Go routines and channels to process large-scale repository health</li>
-                            <li>Designed a responsive, scannable user interface to display contribution vitals</li>
-                            <li><b>Tech: </b>Go, HTMX, Redis, SQLite</li>
-                        </ul>
+            </header>
+
+            <main id="main">
+                <section id="about" aria-labelledby="about-title">
+                    <div class="section-heading">
+                        <h2 id="about-title">About</h2>
+                        <div class="bar" aria-hidden="true"></div>
                     </div>
-                    <div class="card active">
-                        <b>Control Theory Toolbox</b>
-                        <br />
-                        <a href="https://www.github.com/haydenheroux/controls/">GitHub</a>
-                        <br />
-                        <br />
-                        <p>Open-source tool suite focusing on state-space modeling, feedback control loops, and state estimation filters.</p>
-                        <ul>
-                            <li>Built simulation tools to analyze real-time system performance, timing, and stability</li>
-                            <li><b>Tech: </b>C++, Eigen, ZeroMQ</li>
-                        </ul>
+                    <p>I'm a computer science student at WPI who transferred from RPI, where I did controls development for Rensselaer Motorsport's Formula SAE team and served on the executive board of RPI Robotics.</p>
+                    <br/>
+                    <p>My projects include a state-space controls simulator in C++, Merge Zone (a hypermedia code analytics platform in Go), and a Unix-style media downloader. I'm most at home writing robust software for systems.</p>
+                </section>
+
+                <section id="news" aria-labelledby="news-title">
+                    <div class="section-heading">
+                        <h2 id="news-title">News</h2>
+                        <div class="bar" aria-hidden="true"></div>
                     </div>
-                    <div class="card">
-                        <b>HyprMile</b>
-                        <br />
-                        <a href="https://www.github.com/haydenheroux/hyprmile/">GitHub</a>
-                        <a href="https://hyprmile.vercel.app/">Site</a>
-                        <br />
-                        <br />
-                        <p>User-focused utility app for recording travel and fuel economy data.</p>
-                        <ul>
-                            <li><b>Tech: </b>React, TypeScript</li>
-                        </ul>
+                    <ul class="news-list">
+                        <li>
+                            <span class="date">May 2026</span>
+                            <span>Joined Arden Building Companies, working on data pipelines, validation, and observability for building operations.</span>
+                        </li>
+                        <li>
+                            <span class="date">Mar 2026</span>
+                            <span>Launched <a href="https://www.merge.zone/" rel="noopener">merge.zone</a> while taking CS 3733 - Software Engineering.
+                        </li>
+                        <li>
+                            <span class="date">Jan 2026</span>
+                            <span>Transferred to WPI. Started as the ACM chapter system administrator.</span>
+                        </li>
+                        <li>
+                            <span class="date">Dec 2025</span>
+                            <span>Wrapped my FM co-op with an AI-powered document analysis capstone project.</span>
+                        </li>
+                        <li>
+                            <span class="date">Jul 2025</span>
+                            <span>Joined FM, writing software for the underwriting department with a team of 10 experienced software engineers.</span>
+                        </li>
+                        <li>
+                            <span class="date">2024-25</span>
+                            <span>Controls development for Rensselaer Motorsport Formula SAE; executive board, RPI Robotics.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="projects" aria-labelledby="projects-title">
+                    <div class="section-heading">
+                        <h2 id="projects-title">Projects</h2>
+                        <div class="bar" aria-hidden="true"></div>
                     </div>
-                    <div class="card">
-                        <b>RPI Robotics Website</b>
-                        <br />
-                        <a href="https://www.github.com/RPI-Robotics-Club/rpi-robotics-website/">GitHub</a>
-                        <a href="https://sites.ecse.rpi.edu/roboticsclub/">Site</a>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>Merge Zone</h3>
+                            <p class="card-links">
+                                <a href="https://github.com/mergezone/mergezone" rel="noopener">GitHub</a>
+                                <a href="https://www.merge.zone/" rel="noopener">Site</a>
+                            </p>
+                            <p>Code analytics for software teams. Concurrent Go pipeline over the <a href="https://docs.github.com/en/rest" rel="noopener">GitHub API</a> with a hypermedia UI.</p>
+                            <ul class="card-points">
+                                <li>Concurrent data processing in Go, using goroutines and channels to feed a Redis-backed queue</li>
+                                <li>Hypermedia UI with <a href="https://htmx.org/" rel="noopener">HTMX</a>, <a href="https://templ.guide/" rel="noopener">templ</a>, and <a href="https://alpinejs.dev/" rel="noopener">AlpineJS</a> to minimize network footprint and client latency</li>
+                            </ul>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://go.dev/" rel="noopener"><img src="./public/icons/go.svg" alt="" aria-hidden="true" width="14" height="14"/>Go</a></li>
+                                <li><a href="https://htmx.org/" rel="noopener"><img src="./public/icons/htmx.svg" alt="" aria-hidden="true" width="14" height="14"/>HTMX</a></li>
+                                <li><a href="https://templ.guide/" rel="noopener">templ</a></li>
+                                <li><a href="https://alpinejs.dev/" rel="noopener">AlpineJS</a></li>
+                                <li><a href="https://redis.io/" rel="noopener"><img src="./public/icons/redis.svg" alt="" aria-hidden="true" width="14" height="14"/>Redis</a></li>
+                                <li><a href="https://www.sqlite.org/" rel="noopener"><img src="./public/icons/sqlite.svg" alt="" aria-hidden="true" width="14" height="14"/>SQLite</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>Control Theory Toolbox</h3>
+                            <p class="card-links">
+                                <a href="https://github.com/haydenheroux/controls" rel="noopener">GitHub</a>
+                            </p>
+                            <p>Open-source state-space simulation and control toolbox. Models gravity, plant inversion feedforward, and motion profiles. Ships with simulators for FRC robots!</p>
+                            <ul class="card-points">
+                                <li>Discretizes systems with <a href="https://eigen.tuxfamily.org/" rel="noopener">Eigen</a>, unit-safe computation with <a href="https://github.com/aurora-opensource/au" rel="noopener">au</a></li>
+                                <li>Interprocess communication over <a href="https://zeromq.org/" rel="noopener">ZeroMQ</a> and <a href="https://docs.wpilib.org/en/stable/docs/software/networktables/index.html" rel="noopener">NetworkTables</a></li>
+                            </ul>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://en.cppreference.com/w/cpp" rel="noopener"><img src="./public/icons/cplusplus.svg" alt="" aria-hidden="true" width="14" height="14"/>C++</a></li>
+                                <li><a href="https://eigen.tuxfamily.org/" rel="noopener">Eigen</a></li>
+                                <li><a href="https://zeromq.org/" rel="noopener">ZeroMQ</a></li>
+                                <li><a href="https://github.com/aurora-opensource/au" rel="noopener">au</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>HyprMile</h3>
+                            <p class="card-links">
+                                <a href="https://github.com/haydenheroux/hyprmile" rel="noopener">GitHub</a>
+                            </p>
+                            <p>Privacy-first travel and fuel economy tracker. All data stays on the device; location entry is optional, and cost analysis is built in.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://react.dev/" rel="noopener"><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</a></li>
+                                <li><a href="https://www.typescriptlang.org/" rel="noopener"><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>Media</h3>
+                            <p class="card-links">
+                                <a href="https://github.com/haydenheroux/media" rel="noopener">GitHub</a>
+                            </p>
+                            <p>Unix-style media downloader with multiple backends. A small model of resources, identifiers, and attributes keeps it composable.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://go.dev/" rel="noopener"><img src="./public/icons/go.svg" alt="" aria-hidden="true" width="14" height="14"/>Go</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>KMeans</h3>
+                            <p class="card-links">
+                                <a href="https://github.com/haydenheroux/kmeans" rel="noopener">GitHub</a>
+                            </p>
+                            <p>Stylized image processing: clusters pixels by color, then maps each cluster to a new palette. Optional downsampling adds pixelated or grainy effects.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://www.python.org/" rel="noopener"><img src="./public/icons/python.svg" alt="" aria-hidden="true" width="14" height="14"/>Python</a></li>
+                                <li><a href="https://opencv.org/" rel="noopener"><img src="./public/icons/opencv.svg" alt="" aria-hidden="true" width="14" height="14"/>OpenCV</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>frcdb</h3>
+                            <p class="card-links">
+                                <a href="https://github.com/haydenheroux/frcdb" rel="noopener">GitHub</a>
+                            </p>
+                            <p>Scouting database for FIRST Robotics Competition: collect, query, and analyze match data at competitions.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://kotlinlang.org/" rel="noopener"><img src="./public/icons/kotlin.svg" alt="" aria-hidden="true" width="14" height="14"/>Kotlin</a></li>
+                                <li>SQL</li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>pickban</h3>
+                            <p class="card-links">
+                                <a href="https://github.com/haydenheroux/pickban" rel="noopener">GitHub</a>
+                            </p>
+                            <p>Pick/ban helper and calculator for <a href="https://www.leagueoflegends.com/" rel="noopener">League of Legends</a> draft phases.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://svelte.dev/" rel="noopener"><img src="./public/icons/svelte.svg" alt="" aria-hidden="true" width="14" height="14"/>Svelte</a></li>
+                                <li><a href="https://www.typescriptlang.org/" rel="noopener"><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>RPI Robotics Website</h3>
+                            <p class="card-links">
+                                <a href="https://sites.ecse.rpi.edu/roboticsclub/" rel="noopener">Site</a>
+                            </p>
+                            <p>Modernized the RPI Robotics Club website while on the exec board.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://react.dev/" rel="noopener"><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</a></li>
+                                <li><a href="https://www.typescriptlang.org/" rel="noopener"><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</a></li>
+                            </ul>
+                        </article>
                     </div>
-                    <div class="card">
-                        <b>KMeans</b>
-                        <br />
-                        <a href="https://www.github.com/haydenheroux/kmeans/">GitHub</a>
+                </section>
+
+                <section id="experience" aria-labelledby="experience-title">
+                    <div class="section-heading">
+                        <h2 id="experience-title">Experience</h2>
+                        <div class="bar" aria-hidden="true"></div>
                     </div>
-                    <div class="card">
-                        <b>Media</b>
-                        <br />
-                        <a href="https://www.github.com/haydenheroux/media/">GitHub</a>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>Arden Building Companies</h3>
+                            <p class="role-line">Software engineering · <span class="date">May 2026 - Present</span></p>
+                            <p>Data engineering for building operations: structured pipelines, validation, and observability that turn operational data into decisions.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://www.microsoft.com/en-us/power-platform/products/power-bi" rel="noopener">Power BI</a></li>
+                                <li><a href="https://docs.pydantic.dev/" rel="noopener">Pydantic</a></li>
+                                <li><a href="https://pydantic.dev/logfire/" rel="noopener">Logfire</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>FM</h3>
+                            <p class="role-line">Software engineering intern · <span class="date">Jul 2025 - Dec 2025</span></p>
+                            <p>On a team of 10 engineers building a claims-handling application for underwriting. Built an AI-powered tool that analyzes uploaded files and surfaces critical insights from contracts and documents.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://www.typescriptlang.org/" rel="noopener"><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</a></li>
+                                <li><a href="https://react.dev/" rel="noopener"><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</a></li>
+                                <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/" rel="noopener"><img src="./public/icons/csharp.svg" alt="" aria-hidden="true" width="14" height="14"/>C#</a></li>
+                                <li><a href="https://www.microsoft.com/en-us/ai/ai-foundry" rel="noopener">Microsoft Foundry</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>Rensselaer Motorsport · Formula SAE</h3>
+                            <p class="role-line">Controls development · <span class="date">2024 - 2025</span></p>
+                            <p>Embedded software development on custom STM32 VCU, transfer function modeling, sensor filtering, and simulation for the racing program.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://en.cppreference.com/w/cpp" rel="noopener"><img src="./public/icons/cplusplus.svg" alt="" aria-hidden="true" width="14" height="14"/>C++</a></li>
+                                <li>Control theory</li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <h3>RPI Robotics</h3>
+                            <p class="role-line">Executive board · <span class="date">2024 - 2025</span></p>
+                            <p>Executive board member for the club's robotics program; rebuilt the club website.</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><a href="https://react.dev/" rel="noopener"><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</a></li>
+                                <li>Leadership</li>
+                            </ul>
+                        </article>
                     </div>
-                </div>
-            </section>
-            <section>
-                <div class="section-heading">
-                    <h2 id="experience">Experience</h2>
-                    <div class="bar"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card">
-                        <b>Arden Building Companies</b>
-                        <br />
-                        <i>May 2026 – Present</i>
-                        <p>
-                        </p>
-                        <ul>
-                            <li>Power BI</li>
-                            <li>Pydantic</li>
-                            <li>Logfire</li>
-                        </ul>
+                </section>
+
+                <section id="skills" aria-labelledby="skills-title">
+                    <div class="section-heading">
+                        <h2 id="skills-title">Skills</h2>
+                        <div class="bar" aria-hidden="true"></div>
                     </div>
-                    <div class="card">
-                        <b>FM</b>
-                        <br />
-                        <i>Jul 2025 – Dec 2025</i>
-                        <p>
-                            Worked on a team of 10 software engineers to develop a claims handling application for the underwriting department.
-                            Created AI-powered tool to perform analysis on uploaded files, surfacing critical insights from contracts and other documents.
-                        </p>
-                        <ul>
-                            <li>TypeScript</li>
-                            <li>React</li>
-                            <li>C#</li>
-                            <li>Microsoft Foundry</li>
-                        </ul>
+                    <div class="card-grid skill-grid">
+                        <div class="card">
+                            <h3>Languages</h3>
+                            <ul class="pills">
+                                <li><a href="https://en.cppreference.com/w/c" rel="noopener"><img src="./public/icons/c.svg" alt="" aria-hidden="true" width="14" height="14"/>C</a></li>
+                                <li><a href="https://en.cppreference.com/w/cpp" rel="noopener"><img src="./public/icons/cplusplus.svg" alt="" aria-hidden="true" width="14" height="14"/>C++</a></li>
+                                <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/" rel="noopener"><img src="./public/icons/csharp.svg" alt="" aria-hidden="true" width="14" height="14"/>C#</a></li>
+                                <li><a href="https://go.dev/" rel="noopener"><img src="./public/icons/go.svg" alt="" aria-hidden="true" width="14" height="14"/>Go</a></li>
+                                <li><a href="https://www.rust-lang.org/" rel="noopener"><img src="./public/icons/rust.svg" alt="" aria-hidden="true" width="14" height="14"/>Rust</a></li>
+                                <li><a href="https://www.python.org/" rel="noopener"><img src="./public/icons/python.svg" alt="" aria-hidden="true" width="14" height="14"/>Python</a></li>
+                                <li><a href="https://www.typescriptlang.org/" rel="noopener"><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</a></li>
+                                <li><a href="https://dev.java/" rel="noopener"><img src="./public/icons/java.svg" alt="" aria-hidden="true" width="14" height="14"/>Java</a></li>
+                                <li><a href="https://kotlinlang.org/" rel="noopener"><img src="./public/icons/kotlin.svg" alt="" aria-hidden="true" width="14" height="14"/>Kotlin</a></li>
+                                <li><a href="https://www.haskell.org/" rel="noopener"><img src="./public/icons/haskell.svg" alt="" aria-hidden="true" width="14" height="14"/>Haskell</a></li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Frameworks &amp; libraries</h3>
+                            <ul class="pills">
+                                <li><a href="https://react.dev/" rel="noopener"><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</a></li>
+                                <li><a href="https://svelte.dev/" rel="noopener"><img src="./public/icons/svelte.svg" alt="" aria-hidden="true" width="14" height="14"/>Svelte</a></li>
+                                <li><a href="https://vite.dev/" rel="noopener"><img src="./public/icons/vite.svg" alt="" aria-hidden="true" width="14" height="14"/>Vite</a></li>
+                                <li><a href="https://numpy.org/" rel="noopener"><img src="./public/icons/numpy.svg" alt="" aria-hidden="true" width="14" height="14"/>NumPy</a></li>
+                                <li><a href="https://opencv.org/" rel="noopener"><img src="./public/icons/opencv.svg" alt="" aria-hidden="true" width="14" height="14"/>OpenCV</a></li>
+                                <li><a href="https://eigen.tuxfamily.org/" rel="noopener">Eigen</a></li>
+                                <li><a href="https://zeromq.org/" rel="noopener">ZeroMQ</a></li>
+                                <li><a href="https://cmake.org/" rel="noopener"><img src="./public/icons/cmake.svg" alt="" aria-hidden="true" width="14" height="14"/>CMake</a></li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Tools &amp; platforms</h3>
+                            <ul class="pills">
+                                <li><a href="https://git-scm.com/" rel="noopener"><img src="./public/icons/git.svg" alt="" aria-hidden="true" width="14" height="14"/>Git</a></li>
+                                <li><a href="https://www.kernel.org/" rel="noopener"><img src="./public/icons/linux.svg" alt="" aria-hidden="true" width="14" height="14"/>Linux</a></li>
+                                <li><a href="https://neovim.io/" rel="noopener"><img src="./public/icons/neovim.svg" alt="" aria-hidden="true" width="14" height="14"/>Neovim</a></li>
+                                <li><a href="https://azure.microsoft.com/" rel="noopener"><img src="./public/icons/azure.svg" alt="" aria-hidden="true" width="14" height="14"/>Azure</a></li>
+                                <li><a href="https://www.postman.com/" rel="noopener"><img src="./public/icons/postman.svg" alt="" aria-hidden="true" width="14" height="14"/>Postman</a></li>
+                                <li><a href="https://jupyter.org/" rel="noopener"><img src="./public/icons/jupyter.svg" alt="" aria-hidden="true" width="14" height="14"/>Jupyter</a></li>
+                                <li><a href="https://posit.co/products/open-source/rstudio/" rel="noopener"><img src="./public/icons/rstudio.svg" alt="" aria-hidden="true" width="14" height="14"/>RStudio</a></li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Data &amp; services</h3>
+                            <ul class="pills">
+                                <li><a href="https://www.postgresql.org/" rel="noopener"><img src="./public/icons/postgresql.svg" alt="" aria-hidden="true" width="14" height="14"/>Postgres</a></li>
+                                <li><a href="https://www.microsoft.com/en-us/sql-server/" rel="noopener"><img src="./public/icons/mssql.svg" alt="" aria-hidden="true" width="14" height="14"/>MS SQL Server</a></li>
+                                <li><a href="https://www.sqlite.org/" rel="noopener"><img src="./public/icons/sqlite.svg" alt="" aria-hidden="true" width="14" height="14"/>SQLite</a></li>
+                                <li><a href="https://redis.io/" rel="noopener"><img src="./public/icons/redis.svg" alt="" aria-hidden="true" width="14" height="14"/>Redis</a></li>
+                                <li><a href="https://supabase.com/" rel="noopener"><img src="./public/icons/supabase.svg" alt="" aria-hidden="true" width="14" height="14"/>Supabase</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section>
-                <div class="section-heading">
-                    <h2 id="skills">Skills</h2>
-                    <div class="bar"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card">
-                        <b>Languages</b>
-                        <ul>
-                            <li>TypeScript</li>
-                            <li>C++</li>
-                            <li>Go</li>
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>C</li>
-                            <li>Kotlin</li>
-                        </ul>
+                </section>
+
+                <section id="stats" aria-labelledby="stats-title">
+                    <div class="section-heading">
+                        <h2 id="stats-title">Stats</h2>
+                        <div class="bar" aria-hidden="true"></div>
                     </div>
-                    <div class="card">
-                        <b>Frameworks + Libraries</b>
-                        <ul>
-                            <li>React</li>
-                            <li>Svelte</li>
-                            <li>Vite</li>
-                            <li>NumPy</li>
-                            <li>OpenCV</li>
-                            <li>Eigen</li>
-                            <li>ZeroMQ</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <b>Tools + Platforms</b>
-                        <ul>
-                            <li>Git</li>
-                            <li>Linux</li>
-                            <li>Azure</li>
-                            <li>Postman</li>
-                            <li>Bruno</li>
-                            <li>Jupyter</li>
-                            <li>RStudio</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <b>Databases + Services</b>
-                        <ul>
-                            <li>Postgres</li>
-                            <li>Microsoft SQL Server</li>
-                            <li>SQLite</li>
-                            <li>Supabase</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="section-heading">
-                    <h2 id="stats">Stats</h2>
-                    <div class="bar"></div>
-                </div>
-                <div class="calendar">
-                </div>
-            </section>
-        </main>
-        <footer>
-        </footer>
-    </body>
-    <script>
-        GitHubCalendar(".calendar", "haydenheroux", { responsive: true, tooltips: true, global_stats: false });
-    </script>
-    <script src="./public/oneko.js" data-cat="./public/oneko.gif"></script>
-    <a href="#" id="nav-to-top">
-       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M207.39,115.06A8,8,0,0,1,200,120H136v96a8,8,0,0,1-16,0V120H56a8,8,0,0,1-5.66-13.66l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,207.39,115.06Z"></path></svg> 
-    </a>
+                    <p class="stats-note">Active on GitHub since 2017</p>
+                    <div class="calendar" aria-label="GitHub contribution calendar for haydenheroux"></div>
+                </section>
+            </main>
+
+            <footer>
+                <p>© 2026 Hayden Heroux</p>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://github.com/haydenheroux" rel="noopener" aria-label="GitHub profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/hayden-heroux" rel="noopener" aria-label="LinkedIn profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                GitHubCalendar('.calendar', 'haydenheroux', { responsive: true, tooltips: true, global_stats: false });
+            });
+        </script>
+        <script src="./public/oneko.js" data-cat="./public/oneko.gif"></script>
+
+
+</body>
 </html>

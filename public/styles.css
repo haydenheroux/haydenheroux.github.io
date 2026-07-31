@@ -1,281 +1,514 @@
-:root {
-    --color-background: #f9faf9;
-    --color-card-background: #f5f6f5;
-    --color-body: #545454;
-    --color-border: #bbbfbb;
-    --color-accent: #738754;
-    --color-accent-1: #91aa69;
-    --color-accent-2: #515e3a;
-    --color-accent-3: #2e3621;
+/* ============================================================
+   haydenheroux.com
+   Work Sans for text, JetBrains Mono for dates and tech labels.
+   Kept deliberately plain; green is the only accent.
+   ============================================================ */
 
-    --size-border-radius: 3px;
+:root {
+    --background: #f9faf9;
+    --surface: #ffffff;
+    --card-background: #f5f6f5;
+    --body: #545454;
+    --heading: #2e3621;
+    --border: #d9ded3;
+    --accent: #46602f;
+    --accent-mid: #91aa69;
+    --accent-1: #91aa69;
+    --accent-2: #515e3a;
+    --accent-3: #2e3621;
+
+    --font-body: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+    --radius: 3px;
+
+    /* feather "external-link" icon, used as a mask on outbound links */
+    --external-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
 }
 
 body {
-    max-width: 800px;
-    margin: 2rem auto;
-
-    background: var(--color-background);
-    color: var(--color-body);
-
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.4;
-
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-a {
-    color: inherit;
-
-    text-decoration: none;
-    background-position-y: -0%;
-    background-image: linear-gradient(180deg, transparent 50%, var(--color-accent) 50%);
-    transition: all 0.1s ease;
-    background-size: 2px;
-    background-size: auto 190%;
-    padding: 3px 4px;
-}
-
-ul {
-    margin-block: 0;
-    margin-top: 0.5rem;
-}
-
-a:hover {
-    background-position-y: 100%;
-    color: var(--color-background);
-    transition: all 0.1s ease;
-}
-
-header {
-    display: flex;
-    gap: 2rem;
-}
-
-.profile-photo {
-    width: 200px;
-    height: auto;
-    aspect-ratio: 1;
-
-    border-radius: 50%;
-}
-
-h1, h2, h3, .info b {
-    color: var(--color-accent);
+    margin: 0;
+    background: var(--background);
+    color: var(--body);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 p {
     margin: 0;
 }
 
-.info {
-    margin-bottom: 1.25rem;
+h1, h2, h3 {
+    color: var(--heading);
+    margin: 0;
 }
 
-.info h1, .info p {
-    margin-bottom: 0.75rem;
+a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--accent-mid);
+    text-underline-offset: 0.18em;
 }
 
-.info h1 {
-    line-height: 0.65;
-    font-weight: 700;
+a:hover,
+a:focus-visible {
+    color: var(--accent-strong);
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent);
 }
 
-.info b {
-    font-weight: 600;
+/* external links: trailing arrow, inherits text color via mask */
+a[href^="http"]::after {
+    content: "";
+    display: inline-block;
+    width: 0.72em;
+    height: 0.72em;
+    margin-left: 0.22em;
+    vertical-align: -0.11em;
+    background-color: currentColor;
+    -webkit-mask: var(--external-icon) no-repeat center / contain;
+    mask: var(--external-icon) no-repeat center / contain;
 }
 
-.info p {
-    line-height: 0.95;
+/* icon-only links and tech pills don't need the arrow */
+.pills a::after,
+.contact-links a::after,
+.footer-links a::after {
+    content: none;
 }
 
-nav {
-    padding: 0;
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* skip link */
+.skip-link {
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    z-index: 100;
+    padding: 0.5rem 0.9rem;
+    background: var(--accent-3);
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.skip-link:focus-visible {
+    left: 0;
+}
+
+/* ---------- top nav ---------- */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-
-    background-color: var(--color-accent);
-    border-radius: var(--size-border-radius);
-
-    overflow-x: auto;
+    gap: 0.25rem 1.4rem;
+    padding: 0.7rem 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
 }
 
-nav a {
-    padding: 10px 20px;
-    color: var(--color-background);
+.topbar a {
+    color: var(--body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+}
 
-    background-image: none;
+.topbar a:hover,
+.topbar a:focus-visible {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 0.18em;
+}
 
+/* ---------- layout ---------- */
+
+.site-shell {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 3rem;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--surface);
+    box-shadow: 0 0 0 1px var(--border);
+    object-fit: cover;
+    flex: none;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.role {
+    margin-top: 0.4rem;
     font-weight: 600;
+    color: var(--heading);
 }
 
-nav a:hover, nav a:active {
-    background-image: linear-gradient(180deg, transparent 50%, var(--color-accent-2) 50%);
-    background-size: auto 200%;
+.hero-line {
+    margin-top: 0.6rem;
+    max-width: 52ch;
 }
+
+.contact-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    margin: 1.1rem 0 0;
+    padding: 0;
+}
+
+.contact-links a {
+    display: inline-flex;
+    color: var(--body);
+    text-decoration: none;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-links svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    display: block;
+}
+
+/* ---------- sections ---------- */
 
 main {
     display: flex;
     flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
 }
 
 .section-heading {
     display: flex;
     align-items: center;
-    gap: 12px;
-
-    --padding-top: 2rem;
-
-    h2 {
-        padding-top: var(--padding-top);
-    }
-
-    .bar {
-        width: 100%;
-        margin-top: calc(var(--padding-top) + .25rem);
-        height: 2px;
-        border-radius: 2px;
-        background-color: var(--color-accent);
-    }
+    gap: 1rem;
+    margin-bottom: 1.2rem;
 }
 
-.card-container {
+.section-heading h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.section-heading .bar {
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+}
+
+section > p,
+.news-list {
+    max-width: 65ch;
+}
+
+/* ---------- news ---------- */
+
+.news-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news-list li {
+    display: flex;
+    gap: 1.25rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.news-list li:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.news-list .date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    white-space: nowrap;
+    padding-top: 0.15rem;
+    width: 5.5rem;
+    flex: none;
+}
+
+/* ---------- cards ---------- */
+
+.card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 .card {
-    width: calc(100% - 22px); 
-    max-width: 380px;
-    margin-inline: auto;
-    padding: 0.9rem;
-
-    font-size: 0.9rem;
-    line-height: 1.4;
-
-    b, i, a {
-        font-size: 1rem;
-    }
-
-    b {
-        font-weight: 600;
-    }
-
-    p {
-        margin-block: 0.5rem;
-    }
+    background: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .card.active {
-    border-width: 2px;
-    border-color: var(--color-accent);
+    border-color: var(--accent);
 }
 
-.card, .calendar {
-    border: 1px solid var(--color-border) !important;
-    border-radius: 3px;
-    background-color: var(--color-card-background);
-
-    &:hover {
-        background-color: var(--color-background);
-    }
+.card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
+.card p {
+    font-size: 0.92rem;
+}
+
+.card-links {
+    display: flex;
+    gap: 1.1rem;
+    font-size: 0.85rem !important;
+}
+
+.card-points {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--body);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card-points li::marker {
+    color: var(--accent);
+}
+
+/* tech pills */
+.pills {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: auto;
+}
+
+.pills li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-2);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0;
+}
+
+.pills li:not(:has(a)) {
+    padding: 0.2rem 0.65rem;
+}
+
+.pills a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.65rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.pills a:hover,
+.pills a:focus-visible {
+    color: var(--accent-strong);
+}
+
+.pills li:hover {
+    border-color: var(--accent);
+}
+
+.pills img {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+.skill-grid .pills {
+    margin-top: 0;
+}
+
+.role-line {
+    font-size: 0.9rem;
+}
+
+.role-line .date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+/* ---------- stats ---------- */
+
+.stats-note {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent-2);
+    margin-bottom: 0.9rem;
+}
+
+/* GitHub calendar */
 .calendar {
-    font-family: inherit !important;
-    width: 100%;
-    height: 200px;
+    width: 100% !important;
+    font-family: var(--font-mono) !important;
+    background: var(--card-background);
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    min-height: 190px;
+}
+
+.calendar caption {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-2);
+    caption-side: top;
+    text-align: left;
+    padding-bottom: 0.6rem;
 }
 
 .calendar div a {
     visibility: hidden;
 }
 
-.calendar caption {
-    font-weight: 600;
-}
+.ContributionCalendar-day[data-level="1"] { background-color: #c7d6b0 !important; }
+.ContributionCalendar-day[data-level="2"] { background-color: var(--accent-1) !important; }
+.ContributionCalendar-day[data-level="3"] { background-color: var(--accent) !important; }
+.ContributionCalendar-day[data-level="4"] { background-color: var(--accent-3) !important; }
 
-.ContributionCalendar-day[data-level="1"] {
-    background-color: var(--color-accent-1) !important;
-}
+/* ---------- footer ---------- */
 
-.ContributionCalendar-day[data-level="2"] {
-    background-color: var(--color-accent) !important;
-}
-
-.ContributionCalendar-day[data-level="3"] {
-    background-color: var(--color-accent-2) !important;
-}
-
-.ContributionCalendar-day[data-level="4"] {
-    background-color: var(--color-accent-3) !important;
-}
-
-#nav-to-top {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: 3rem;
-    height: 3rem;
-    z-index: 1000;
-    visibility: hidden;
-
+footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: baseline;
     justify-content: center;
-
-    background-color: var(--color-accent);
-    background-image: none;
-    border-radius: 50%;
-    transition: all 0.1s ease;
-
-    color: var(--color-background);
+    gap: 0.5rem 1.5rem;
+    font-size: 0.88rem;
+    color: var(--body);
 }
 
-#nav-to-top:hover, #nav-to-top:active {
-    background-color: var(--color-accent-2);
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
 }
 
-@media (max-width: 800px) {
-    body {
-        margin-inline: 2rem;
+.footer-links a {
+    display: inline-flex;
+    color: var(--body);
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.footer-links svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    display: block;
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
+}
 
-    header {
+/* ---------- responsive ---------- */
+
+@media (max-width: 700px) {
+    .hero {
         flex-direction: column;
-        gap: 0rem;
+        text-align: center;
     }
 
-    .profile-photo {
-        width: 100%;
-        max-width: 320px;
+    .hero-line {
         margin-inline: auto;
-        margin-bottom: 4rem;
     }
 
-    nav {
-        justify-content: flex-start;
+    .contact-links {
+        justify-content: center;
     }
 
-    .card-container {
+    .card-grid {
         grid-template-columns: 1fr;
     }
 
-    .card {
-        max-width: 540px;
+    .news-list li {
+        flex-direction: column;
+        gap: 0.15rem;
     }
 
-    .calendar {
-        max-width: 570px;
-    }
-
-    #nav-to-top {
-        visibility: visible;
+    .news-list .date {
+        width: auto;
     }
 }
