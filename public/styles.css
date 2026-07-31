@@ -12,6 +12,7 @@
     --heading: #2e3621;
     --border: #d9ded3;
     --accent: #46602f;
+    --accent-mid: #91aa69;
     --accent-1: #91aa69;
     --accent-2: #515e3a;
     --accent-3: #2e3621;
@@ -20,6 +21,9 @@
     --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
     --radius: 3px;
+
+    /* feather "external-link" icon, used as a mask on outbound links */
+    --external-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E");
 }
 
 * {
@@ -52,13 +56,37 @@ h1, h2, h3 {
 
 a {
     color: var(--accent);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--accent-mid);
+    text-underline-offset: 0.18em;
 }
 
 a:hover,
 a:focus-visible {
-    text-decoration: underline;
-    text-underline-offset: 0.18em;
+    color: var(--accent-strong);
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent);
+}
+
+/* external links: trailing arrow, inherits text color via mask */
+a[href^="http"]::after {
+    content: "";
+    display: inline-block;
+    width: 0.72em;
+    height: 0.72em;
+    margin-left: 0.22em;
+    vertical-align: -0.11em;
+    background-color: currentColor;
+    -webkit-mask: var(--external-icon) no-repeat center / contain;
+    mask: var(--external-icon) no-repeat center / contain;
+}
+
+/* icon-only links and tech pills don't need the arrow */
+.pills a::after,
+.contact-links a::after,
+.footer-links a::after {
+    content: none;
 }
 
 :focus-visible {
@@ -102,11 +130,16 @@ a:focus-visible {
     color: var(--body);
     font-size: 0.95rem;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .topbar a:hover,
 .topbar a:focus-visible {
     color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 0.18em;
 }
 
 /* ---------- layout ---------- */
