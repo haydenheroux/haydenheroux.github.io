@@ -66,9 +66,9 @@
                         <h2 id="about-title">About</h2>
                         <div class="bar" aria-hidden="true"></div>
                     </div>
-                    <p>I'm a computer science student at WPI who transferred from RPI, where I did controls development for Rensselaer Motorsport's Formula SAE team and served on the exec board of RPI Robotics. I build software for systems that have to be right the first time: feedback loops for robots, pipelines for teams, and the infrastructure in between.</p>
+                    <p>I'm a computer science student at WPI who transferred from RPI, where I did controls development for Rensselaer Motorsport's Formula SAE team and served on the executive board of RPI Robotics.</p>
                     <br/>
-                    <p>My projects span a state-space simulator in C++, Merge Zone (a deployed repository analytics platform in Go), and a Unix-style media downloader. I'm most at home in the layers most people don't see: kernels, window managers, low-level networking.</p>
+                    <p>My projects include a state-space controls simulator in C++, Merge Zone (a hypermedia code analytics platform in Go), and a Unix-style media downloader. I'm most at home writing robust software for systems.</p>
                 </section>
 
                 <section id="news" aria-labelledby="news-title">
@@ -78,24 +78,28 @@
                     </div>
                     <ul class="news-list">
                         <li>
-                            <span class="date">Jun 2026</span>
-                            Merge Zone moved into its own GitHub org: <a href="https://github.com/mergezone/mergezone" rel="noopener">github.com/mergezone</a>.
-                        </li>
-                        <li>
                             <span class="date">May 2026</span>
-                            Joined Arden Building Companies, working on data pipelines, validation, and observability for building operations.
+                            <span>Joined Arden Building Companies, working on data pipelines, validation, and observability for building operations.</span>
                         </li>
                         <li>
                             <span class="date">Mar 2026</span>
-                            Launched <a href="https://www.merge.zone/" rel="noopener">merge.zone</a> and transferred to WPI.
+                            <span>Launched <a href="https://www.merge.zone/" rel="noopener">merge.zone</a> while taking CS 3733 - Software Engineering.
+                        </li>
+                        <li>
+                            <span class="date">Jan 2026</span>
+                            <span>Transferred to WPI. Started as the ACM chapter system administrator.</span>
                         </li>
                         <li>
                             <span class="date">Dec 2025</span>
-                            Wrapped an internship at FM: AI-powered document analysis for the underwriting team.
+                            <span>Wrapped my FM co-op with an AI-powered document analysis capstone project.</span>
+                        </li>
+                        <li>
+                            <span class="date">Jul 2025</span>
+                            <span>Joined FM, writing software for the underwriting department with a team of 10 experienced software engineers.</span>
                         </li>
                         <li>
                             <span class="date">2024-25</span>
-                            Controls development for Rensselaer Motorsport Formula SAE; exec board, RPI Robotics.
+                            <span>Controls development for Rensselaer Motorsport Formula SAE; executive board, RPI Robotics.</span>
                         </li>
                     </ul>
                 </section>
@@ -106,20 +110,22 @@
                         <div class="bar" aria-hidden="true"></div>
                     </div>
                     <div class="card-grid">
-                        <article class="card active">
+                        <article class="card">
                             <h3>Merge Zone</h3>
                             <p class="card-links">
                                 <a href="https://github.com/mergezone/mergezone" rel="noopener">GitHub</a>
                                 <a href="https://www.merge.zone/" rel="noopener">Site</a>
                             </p>
-                            <p>Repository analytics for engineering teams: review workflow, collaboration, and delivery. Concurrent Go pipeline over the <a href="https://docs.github.com/en/rest" rel="noopener">GitHub API</a> with a hypermedia UI.</p>
+                            <p>Code analytics for software teams. Concurrent Go pipeline over the <a href="https://docs.github.com/en/rest" rel="noopener">GitHub API</a> with a hypermedia UI.</p>
                             <ul class="card-points">
                                 <li>Concurrent data processing in Go, using goroutines and channels to feed a Redis-backed queue</li>
-                                <li>Hypermedia UI with HTMX and <a href="https://templ.guide/" rel="noopener">templ</a>, deployed on its own domain</li>
+                                <li>Hypermedia UI with <a href="https://htmx.org/" rel="noopener">HTMX</a>, <a href="https://templ.guide/" rel="noopener">templ</a>, and <a href="https://alpinejs.dev/" rel="noopener">AlpineJS</a> to minimize network footprint and client latency</li>
                             </ul>
                             <ul class="pills" aria-label="Technologies">
                                 <li><a href="https://go.dev/" rel="noopener"><img src="./public/icons/go.svg" alt="" aria-hidden="true" width="14" height="14"/>Go</a></li>
                                 <li><a href="https://htmx.org/" rel="noopener"><img src="./public/icons/htmx.svg" alt="" aria-hidden="true" width="14" height="14"/>HTMX</a></li>
+                                <li><a href="https://templ.guide/" rel="noopener">templ</a></li>
+                                <li><a href="https://alpinejs.dev/" rel="noopener">AlpineJS</a></li>
                                 <li><a href="https://redis.io/" rel="noopener"><img src="./public/icons/redis.svg" alt="" aria-hidden="true" width="14" height="14"/>Redis</a></li>
                                 <li><a href="https://www.sqlite.org/" rel="noopener"><img src="./public/icons/sqlite.svg" alt="" aria-hidden="true" width="14" height="14"/>SQLite</a></li>
                             </ul>
@@ -130,10 +136,10 @@
                             <p class="card-links">
                                 <a href="https://github.com/haydenheroux/controls" rel="noopener">GitHub</a>
                             </p>
-                            <p>Open-source state-space simulation and control toolbox. Ships a Reefscape elevator simulator modeled on Team 5112's FRC robot, with gravity, feedforward, and motion profiling.</p>
+                            <p>Open-source state-space simulation and control toolbox. Models gravity, plant inversion feedforward, and motion profiles. Ships with simulators for FRC robots!</p>
                             <ul class="card-points">
-                                <li>Eigen-based discretization, unit-safe computation with au</li>
-                                <li>Interprocess telemetry over ZeroMQ and <a href="https://docs.wpilib.org/en/stable/docs/software/networktables/index.html" rel="noopener">NetworkTables</a></li>
+                                <li>Discretizes systems with <a href="https://eigen.tuxfamily.org/" rel="noopener">Eigen</a>, unit-safe computation with <a href="https://github.com/aurora-opensource/au" rel="noopener">au</a></li>
+                                <li>Interprocess communication over <a href="https://zeromq.org/" rel="noopener">ZeroMQ</a> and <a href="https://docs.wpilib.org/en/stable/docs/software/networktables/index.html" rel="noopener">NetworkTables</a></li>
                             </ul>
                             <ul class="pills" aria-label="Technologies">
                                 <li><a href="https://en.cppreference.com/w/cpp" rel="noopener"><img src="./public/icons/cplusplus.svg" alt="" aria-hidden="true" width="14" height="14"/>C++</a></li>
@@ -248,7 +254,7 @@
                         <article class="card">
                             <h3>Rensselaer Motorsport · Formula SAE</h3>
                             <p class="role-line">Controls development · <span class="date">2024 - 2025</span></p>
-                            <p>State-space modeling, feedback control, and simulation for the racing program.</p>
+                            <p>Embedded software development on custom STM32 VCU, transfer function modeling, sensor filtering, and simulation for the racing program.</p>
                             <ul class="pills" aria-label="Technologies">
                                 <li><a href="https://en.cppreference.com/w/cpp" rel="noopener"><img src="./public/icons/cplusplus.svg" alt="" aria-hidden="true" width="14" height="14"/>C++</a></li>
                                 <li>Control theory</li>
@@ -331,7 +337,7 @@
                         <h2 id="stats-title">Stats</h2>
                         <div class="bar" aria-hidden="true"></div>
                     </div>
-                    <p class="stats-note">57 public repos · active on GitHub since 2017</p>
+                    <p class="stats-note">Active on GitHub since 2017</p>
                     <div class="calendar" aria-label="GitHub contribution calendar for haydenheroux"></div>
                 </section>
             </main>
@@ -359,7 +365,7 @@
             });
         </script>
         <script src="./public/oneko.js" data-cat="./public/oneko.gif"></script>
-    
+
 
 </body>
 </html>
