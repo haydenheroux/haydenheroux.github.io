@@ -281,7 +281,7 @@ section > p,
     font-size: 0.85rem !important;
 }
 
-.card ul {
+.card-points {
     margin: 0;
     padding-left: 1.2rem;
     font-size: 0.9rem;
@@ -291,16 +291,42 @@ section > p,
     gap: 0.25rem;
 }
 
-.card ul li::marker {
+.card-points li::marker {
     color: var(--accent);
 }
 
-.card .tech {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    color: var(--accent-2);
+/* tech pills */
+.pills {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
     margin-top: auto;
-    padding-top: 0.4rem;
+}
+
+.pills li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-2);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+}
+
+.pills img {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+.skill-grid .pills {
+    margin-top: 0;
 }
 
 .role-line {
@@ -311,15 +337,6 @@ section > p,
     font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--accent);
-}
-
-/* ---------- skills ---------- */
-
-.skill-grid .card ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.3rem 1rem;
-    padding-left: 1.2rem;
 }
 
 /* ---------- stats ---------- */

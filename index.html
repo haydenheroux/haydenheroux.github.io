@@ -113,11 +113,16 @@
                                 <a href="https://www.merge.zone/" rel="noopener">Site</a>
                             </p>
                             <p>Repository analytics for engineering teams: review workflow, collaboration, and delivery. Concurrent Go pipeline over the GitHub API with a hypermedia UI.</p>
-                            <ul>
+                            <ul class="card-points">
                                 <li>Concurrent data processing in Go, using goroutines and channels to feed a Redis-backed queue</li>
                                 <li>Hypermedia UI with HTMX and templ, deployed on its own domain</li>
                             </ul>
-                            <p class="tech">Tech: Go, HTMX, Redis, SQLite</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/go.svg" alt="" aria-hidden="true" width="14" height="14"/>Go</li>
+                                <li><img src="./public/icons/htmx.svg" alt="" aria-hidden="true" width="14" height="14"/>HTMX</li>
+                                <li><img src="./public/icons/redis.svg" alt="" aria-hidden="true" width="14" height="14"/>Redis</li>
+                                <li><img src="./public/icons/sqlite.svg" alt="" aria-hidden="true" width="14" height="14"/>SQLite</li>
+                            </ul>
                         </article>
 
                         <article class="card">
@@ -126,11 +131,16 @@
                                 <a href="https://github.com/haydenheroux/controls" rel="noopener">GitHub</a>
                             </p>
                             <p>Open-source state-space simulation and control toolbox. Ships a Reefscape elevator simulator modeled on Team 5112's FRC robot, with gravity, feedforward, and motion profiling.</p>
-                            <ul>
+                            <ul class="card-points">
                                 <li>Eigen-based discretization, unit-safe computation with au</li>
                                 <li>Interprocess telemetry over ZeroMQ and NetworkTables</li>
                             </ul>
-                            <p class="tech">Tech: C++, Eigen, ZeroMQ, au</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/cplusplus.svg" alt="" aria-hidden="true" width="14" height="14"/>C++</li>
+                                <li>Eigen</li>
+                                <li>ZeroMQ</li>
+                                <li>au</li>
+                            </ul>
                         </article>
 
                         <article class="card">
@@ -139,7 +149,10 @@
                                 <a href="https://github.com/haydenheroux/hyprmile" rel="noopener">GitHub</a>
                             </p>
                             <p>Privacy-first travel and fuel economy tracker. All data stays on the device; location entry is optional, and cost analysis is built in.</p>
-                            <p class="tech">Tech: React, TypeScript</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</li>
+                                <li><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</li>
+                            </ul>
                         </article>
 
                         <article class="card">
@@ -148,7 +161,9 @@
                                 <a href="https://github.com/haydenheroux/media" rel="noopener">GitHub</a>
                             </p>
                             <p>Unix-style media downloader with multiple backends. A small model of resources, identifiers, and attributes keeps it composable.</p>
-                            <p class="tech">Tech: Go</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/go.svg" alt="" aria-hidden="true" width="14" height="14"/>Go</li>
+                            </ul>
                         </article>
 
                         <article class="card">
@@ -157,7 +172,10 @@
                                 <a href="https://github.com/haydenheroux/kmeans" rel="noopener">GitHub</a>
                             </p>
                             <p>Stylized image processing: clusters pixels by color, then maps each cluster to a new palette. Optional downsampling adds pixelated or grainy effects.</p>
-                            <p class="tech">Tech: Python, OpenCV</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/python.svg" alt="" aria-hidden="true" width="14" height="14"/>Python</li>
+                                <li><img src="./public/icons/opencv.svg" alt="" aria-hidden="true" width="14" height="14"/>OpenCV</li>
+                            </ul>
                         </article>
 
                         <article class="card">
@@ -166,7 +184,10 @@
                                 <a href="https://github.com/haydenheroux/frcdb" rel="noopener">GitHub</a>
                             </p>
                             <p>Scouting database for FIRST Robotics Competition: collect, query, and analyze match data at competitions.</p>
-                            <p class="tech">Tech: Kotlin, SQL</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/kotlin.svg" alt="" aria-hidden="true" width="14" height="14"/>Kotlin</li>
+                                <li>SQL</li>
+                            </ul>
                         </article>
 
                         <article class="card">
@@ -175,7 +196,10 @@
                                 <a href="https://github.com/haydenheroux/pickban" rel="noopener">GitHub</a>
                             </p>
                             <p>Pick/ban helper and calculator for League of Legends draft phases.</p>
-                            <p class="tech">Tech: Svelte, TypeScript</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/svelte.svg" alt="" aria-hidden="true" width="14" height="14"/>Svelte</li>
+                                <li><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</li>
+                            </ul>
                         </article>
 
                         <article class="card">
@@ -184,7 +208,10 @@
                                 <a href="https://sites.ecse.rpi.edu/roboticsclub/" rel="noopener">Site</a>
                             </p>
                             <p>Modernized the RPI Robotics Club website while on the exec board.</p>
-                            <p class="tech">Tech: React, TypeScript</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</li>
+                                <li><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</li>
+                            </ul>
                         </article>
                     </div>
                 </section>
@@ -199,28 +226,43 @@
                             <h3>Arden Building Companies</h3>
                             <p class="role-line">Software engineering · <span class="date">May 2026 - Present</span></p>
                             <p>Data engineering for building operations: structured pipelines, validation, and observability that turn operational data into decisions.</p>
-                            <p class="tech">Tech: Power BI, Pydantic, Logfire</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li>Power BI</li>
+                                <li>Pydantic</li>
+                                <li>Logfire</li>
+                            </ul>
                         </article>
 
                         <article class="card">
                             <h3>FM</h3>
                             <p class="role-line">Software engineering intern · <span class="date">Jul 2025 - Dec 2025</span></p>
                             <p>On a team of 10 engineers building a claims-handling application for underwriting. Built an AI-powered tool that analyzes uploaded files and surfaces critical insights from contracts and documents.</p>
-                            <p class="tech">Tech: TypeScript, React, C#, Microsoft Foundry</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</li>
+                                <li><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</li>
+                                <li><img src="./public/icons/csharp.svg" alt="" aria-hidden="true" width="14" height="14"/>C#</li>
+                                <li>Microsoft Foundry</li>
+                            </ul>
                         </article>
 
                         <article class="card">
                             <h3>Rensselaer Motorsport · Formula SAE</h3>
                             <p class="role-line">Controls development · <span class="date">2024 - 2025</span></p>
                             <p>State-space modeling, feedback control, and simulation for the racing program.</p>
-                            <p class="tech">Tech: C++, control theory</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/cplusplus.svg" alt="" aria-hidden="true" width="14" height="14"/>C++</li>
+                                <li>Control theory</li>
+                            </ul>
                         </article>
 
                         <article class="card">
                             <h3>RPI Robotics</h3>
                             <p class="role-line">Executive board · <span class="date">2024 - 2025</span></p>
                             <p>Executive board member for the club's robotics program; rebuilt the club website.</p>
-                            <p class="tech">Tech: React, leadership</p>
+                            <ul class="pills" aria-label="Technologies">
+                                <li><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</li>
+                                <li>Leadership</li>
+                            </ul>
                         </article>
                     </div>
                 </section>
@@ -233,26 +275,52 @@
                     <div class="card-grid skill-grid">
                         <div class="card">
                             <h3>Languages</h3>
-                            <ul>
-                                <li>C</li><li>C++</li><li>C#</li><li>Go</li><li>Rust</li><li>Python</li><li>TypeScript</li><li>Java</li><li>Kotlin</li><li>Haskell</li>
+                            <ul class="pills">
+                                <li><img src="./public/icons/c.svg" alt="" aria-hidden="true" width="14" height="14"/>C</li>
+                                <li><img src="./public/icons/cplusplus.svg" alt="" aria-hidden="true" width="14" height="14"/>C++</li>
+                                <li><img src="./public/icons/csharp.svg" alt="" aria-hidden="true" width="14" height="14"/>C#</li>
+                                <li><img src="./public/icons/go.svg" alt="" aria-hidden="true" width="14" height="14"/>Go</li>
+                                <li><img src="./public/icons/rust.svg" alt="" aria-hidden="true" width="14" height="14"/>Rust</li>
+                                <li><img src="./public/icons/python.svg" alt="" aria-hidden="true" width="14" height="14"/>Python</li>
+                                <li><img src="./public/icons/typescript.svg" alt="" aria-hidden="true" width="14" height="14"/>TypeScript</li>
+                                <li><img src="./public/icons/java.svg" alt="" aria-hidden="true" width="14" height="14"/>Java</li>
+                                <li><img src="./public/icons/kotlin.svg" alt="" aria-hidden="true" width="14" height="14"/>Kotlin</li>
+                                <li><img src="./public/icons/haskell.svg" alt="" aria-hidden="true" width="14" height="14"/>Haskell</li>
                             </ul>
                         </div>
                         <div class="card">
                             <h3>Frameworks &amp; libraries</h3>
-                            <ul>
-                                <li>React</li><li>Svelte</li><li>Vite</li><li>NumPy</li><li>OpenCV</li><li>Eigen</li><li>ZeroMQ</li><li>CMake</li>
+                            <ul class="pills">
+                                <li><img src="./public/icons/react.svg" alt="" aria-hidden="true" width="14" height="14"/>React</li>
+                                <li><img src="./public/icons/svelte.svg" alt="" aria-hidden="true" width="14" height="14"/>Svelte</li>
+                                <li><img src="./public/icons/vite.svg" alt="" aria-hidden="true" width="14" height="14"/>Vite</li>
+                                <li><img src="./public/icons/numpy.svg" alt="" aria-hidden="true" width="14" height="14"/>NumPy</li>
+                                <li><img src="./public/icons/opencv.svg" alt="" aria-hidden="true" width="14" height="14"/>OpenCV</li>
+                                <li>Eigen</li>
+                                <li>ZeroMQ</li>
+                                <li><img src="./public/icons/cmake.svg" alt="" aria-hidden="true" width="14" height="14"/>CMake</li>
                             </ul>
                         </div>
                         <div class="card">
                             <h3>Tools &amp; platforms</h3>
-                            <ul>
-                                <li>Git</li><li>Linux</li><li>Neovim</li><li>Azure</li><li>Postman</li><li>Jupyter</li><li>RStudio</li>
+                            <ul class="pills">
+                                <li><img src="./public/icons/git.svg" alt="" aria-hidden="true" width="14" height="14"/>Git</li>
+                                <li><img src="./public/icons/linux.svg" alt="" aria-hidden="true" width="14" height="14"/>Linux</li>
+                                <li><img src="./public/icons/neovim.svg" alt="" aria-hidden="true" width="14" height="14"/>Neovim</li>
+                                <li><img src="./public/icons/azure.svg" alt="" aria-hidden="true" width="14" height="14"/>Azure</li>
+                                <li><img src="./public/icons/postman.svg" alt="" aria-hidden="true" width="14" height="14"/>Postman</li>
+                                <li><img src="./public/icons/jupyter.svg" alt="" aria-hidden="true" width="14" height="14"/>Jupyter</li>
+                                <li><img src="./public/icons/rstudio.svg" alt="" aria-hidden="true" width="14" height="14"/>RStudio</li>
                             </ul>
                         </div>
                         <div class="card">
                             <h3>Data &amp; services</h3>
-                            <ul>
-                                <li>Postgres</li><li>Microsoft SQL Server</li><li>SQLite</li><li>Redis</li><li>Supabase</li>
+                            <ul class="pills">
+                                <li><img src="./public/icons/postgresql.svg" alt="" aria-hidden="true" width="14" height="14"/>Postgres</li>
+                                <li><img src="./public/icons/mssql.svg" alt="" aria-hidden="true" width="14" height="14"/>MS SQL Server</li>
+                                <li><img src="./public/icons/sqlite.svg" alt="" aria-hidden="true" width="14" height="14"/>SQLite</li>
+                                <li><img src="./public/icons/redis.svg" alt="" aria-hidden="true" width="14" height="14"/>Redis</li>
+                                <li><img src="./public/icons/supabase.svg" alt="" aria-hidden="true" width="14" height="14"/>Supabase</li>
                             </ul>
                         </div>
                     </div>
